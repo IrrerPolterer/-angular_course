@@ -1,7 +1,12 @@
-<input
+<!-- <input
   type="text"
   class="row form-control"
   (input)="onUpdateServerName($event)"
+/> -->
+<input
+  type="text"
+  class="row form-control"
+  [(ngModel)]="serverName"
 />
 
 <p class="row mb-3">
