@@ -1,6 +1,21 @@
+<input
+  type="text"
+  class="row form-control"
+  (input)="onUpdateServerName($event)"
+/>
 
-<div class="row mb-3">  
-  <button class="btn btn-primary col-sm-4" [disabled]="!allowNewServer" (click)="onAddServer()">Add Server</button>
+<p class="row mb-3">
+  {{ serverName }}
+</p>
+
+<div class="row mb-3">
+  <button
+    class="btn btn-primary col-sm-4"
+    [disabled]="!allowNewServer"
+    (click)="onAddServer()"
+  >
+    Add Server
+  </button>
   <p class="col-sm-8">{{ serverCreationStatus }}</p>
 </div>
 
