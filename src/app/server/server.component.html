@@ -1,3 +1,7 @@
-<p>
-    Server with ID <code>{{ serverId }}</code> is <span [ngStyle]="{backgroundColor:serverColor}">{{ serverStatus }}</span>.
+<p
+  [ngClass]="{'fw-bold':serverStatus=='online', 'text-warning':serverStatus=='offline'}"
+>
+  Server with ID <code>{{ serverId }}</code> is
+  <span [ngStyle]="{ backgroundColor: serverColor }">{{ serverStatus }}</span
+  >.
 </p>
