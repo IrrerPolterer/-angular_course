@@ -1,0 +1,13 @@
+<div class="container py-3">
+  <button class="btn btn-primary" (click)="toggleDetails()">
+    Show Details
+  </button>
+
+  <p [hidden]="!showDetails">Tatti loves the nanas.</p>
+
+  <hr />
+
+  <p *ngFor="let logEntry of toggleLog; let i = index" [ngClass]="{'text-primary':i >= 4}">
+    {{ logEntry }}
+  </p>
+</div>
