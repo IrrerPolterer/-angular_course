@@ -9,8 +9,7 @@ export class AppComponent {
   evens: number[] = [];
   odds: number[] = [];
 
-  onGameIncrement(gameIncrementEvent: { increment: number }) {
-    let n = gameIncrementEvent.increment;
+  onGameIncrement(n: number) {
     if (n % 2) {
       this.odds.push(n);
     } else {
