@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-odd',
   templateUrl: './odd.component.html',
-  styleUrls: ['./odd.component.scss']
+  styleUrls: ['./odd.component.scss'],
 })
-export class OddComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class OddComponent {
+  @Input() number = 0;
 }
