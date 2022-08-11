@@ -14,9 +14,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link">Recipes</a>
+          <a
+            (click)="setActiveTab('recipes')"
+            href="#"
+            class="nav-link"
+            [ngClass]="{ active: navActiveTab === 'recipes' }"
+            >Recipes</a
+          >
         </li>
-        <li class="nav-item"><a href="#" class="nav-link">Shopping List</a></li>
+        <li class="nav-item">
+          <a
+            (click)="setActiveTab('shopping-list')"
+            href="#"
+            class="nav-link"
+            [ngClass]="{ active: navActiveTab === 'shopping-list' }"
+            >Shopping List</a
+          >
+        </li>
       </ul>
 
       <ul class="navbar-nav">

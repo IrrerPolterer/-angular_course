@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Input() navActiveTab: string;
+  @Output() navActiveTabChange = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  setActiveTab(tab: string) {
+    this.navActiveTab = tab;
+    this.navActiveTabChange.emit(this.navActiveTab);
   }
-
 }
