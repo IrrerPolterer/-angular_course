@@ -1,5 +1,7 @@
 <div class="container py-3">
-  <app-game-control></app-game-control>
+  <app-game-control
+    (gameIncrement)="onGameIncrement($event)"
+  ></app-game-control>
 
   <hr />
 
