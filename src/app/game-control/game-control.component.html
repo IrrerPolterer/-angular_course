@@ -1,1 +1,20 @@
-<p>game-control works!</p>
+<div class="row g-2">
+  <div class="col-sm">
+    <button
+      (click)="gameStart.emit()"
+      type="button"
+      class="w-100 btn btn-success"
+    >
+      Start
+    </button>
+  </div>
+  <div class="col-sm">
+    <button
+      (click)="gameStop.emit()"
+      type="button"
+      class="w-100 btn btn-danger"
+    >
+      Stop
+    </button>
+  </div>
+</div>
